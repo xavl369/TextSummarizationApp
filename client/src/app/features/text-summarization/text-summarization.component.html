@@ -1,0 +1,59 @@
+<div class="container">
+    <mat-card id="summarization-section">
+        <mat-card-header id="summarization-header">
+        <mat-card-title id="summarization-title">Automatic Text Summarization</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+        <mat-form-field id="input-text-field">
+            <textarea 
+                matInput 
+                placeholder="Enter text to summarize" 
+                [(ngModel)]="inputText" 
+                rows="9">
+            </textarea>
+        </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions id="summarization-actions">
+            <mat-form-field id="summarization-selection">
+                <mat-label>Choose Method</mat-label>
+                <mat-select [(ngModel)]="selectedMethod">
+                    @for (method of summarizationMethods; track method) {
+                        <mat-option [value]="method">{{method}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+            <button 
+                [disabled]="inputText==='' || selectedMethod === ''|| isLoading"
+                mat-raised-button 
+                color="primary" 
+                (click)="summarize()">Summarize
+            </button>
+        </mat-card-actions>
+    </mat-card>
+   
+    <mat-card id="result-section">
+        <mat-card-content>
+            <div>
+                <fieldset>
+                    <legend><i>Original Text:</i></legend>
+                <section [innerHTML]="originalText"></section>
+            </fieldset>
+            </div>
+            <mat-divider id="divider"></mat-divider>
+            <div id="summarized-text-container">
+                <fieldset>
+                    <legend><i>Summarized Text:</i></legend>
+                <section [innerHTML]="summarizedText"></section>
+                </fieldset>
+            </div>
+
+            <mat-progress-spinner 
+                class="loading-overlay" 
+                *ngIf="isLoading" 
+                mode="indeterminate">
+            </mat-progress-spinner>            
+        </mat-card-content>
+    </mat-card>
+</div>
+
+  

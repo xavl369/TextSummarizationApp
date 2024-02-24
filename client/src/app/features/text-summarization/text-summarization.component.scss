@@ -1,0 +1,57 @@
+#summarization-section {
+    background-color: #a6c0ca;
+}
+
+#summarization-header{
+    display: flex;
+    justify-content: center;
+}
+
+#summarization-title{
+    text-shadow: 3px 6px 9px rgba(0,0,0,0.6);
+    margin-bottom: 18px;
+}
+
+#summarization-actions{
+    display: flex; 
+    justify-content: center;
+}
+
+#summarization-selection{
+    margin-right: 30px;
+}
+
+#summarize-button{
+    margin-left: 30px;
+    margin-bottom: 9px;
+}
+
+#result-section{
+    background-color: #eaf6fd;
+}
+
+#input-text-field{
+    width: 100%;
+}
+
+#divider{
+    margin-top: 18px;
+    background-color: #a6c0ca;
+}
+
+#summarized-text-container{
+    margin-top: 9px;
+}
+
+.container{
+    background-color:  #eaf6fd;
+    height:100%;
+}
+
+fieldset, legend {
+    border-color: #a6c0ca;   
+}
+
+.loading-overlay {
+    margin: auto;
+}
