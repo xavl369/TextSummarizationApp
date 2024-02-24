@@ -84,10 +84,15 @@ npm install
 
 ### Backend (Python Flask)
 
-Run the following command to start the Flask server from the working directory:
+If using anaconda activate environment first with the command:
 
 ```bash
 conda activate text-summarization
+```
+
+Run the following command to start the Flask server from the working directory:
+
+```bash
 python app.py
 ```
 
