@@ -87,6 +87,7 @@ npm install
 Run the following command to start the Flask server from the working directory:
 
 ```bash
+conda activate text-summarization
 python app.py
 ```
 
