@@ -4,12 +4,12 @@ This project combines Angular for the frontend and Python Flask for the backend 
 
 ## Features
 
-- **Frontend (Angular):**
+- **Frontend (Angular 17.2):**
   - Allows users to input text and choose a summarization method.
   - Provides a user-friendly interface to summarize text.
   - Displays both the original and summarized text.
   
-- **Backend (Python Flask):**
+- **Backend (Python Flask 3.0.2):**
   - Receives text input and summarization method selection from the frontend.
   - Performs text summarization using various algorithms.
   - Returns the summarized text to the frontend for display.
